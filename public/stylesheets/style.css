@@ -1,0 +1,11 @@
+:root {
+    --primary: #b0ccd1;
+    --secondary: #a5C7cd;
+    --dark: #1d7A8A;
+    --darker: #0b343b;
+    --border-radius: .03rem;
+}
+
+* {
+    border-radius: border-box;
+}

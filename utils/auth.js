@@ -6,4 +6,4 @@ const wAuth = (req, res, next) => {
     }
 };
 
-model.exports = wAuth;
+module.exports = wAuth;
