@@ -9,3 +9,104 @@
 * {
     border-radius: border-box;
 }
+
+body {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    color: var(--dark);
+    line-height: 1.5;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    color: var(--dark)
+}
+
+h2 a:visited {
+    color: var(--secondary);
+}
+
+h2 a {
+    color: var(--primary);
+}
+
+header {
+    margin-top: 5rem;
+}
+
+main {
+    margin: 20px auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+input {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+
+.card-header h2 {
+    color: var(--primary);
+}
+
+.btn {
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 6px 5px;
+    width: 100%;
+    display: block;
+    margin: 5px 0;
+    border-radius: var(--border-radius);
+    color: var(--primary);
+    border: none;
+    outline: none;
+    background-color: var(--dark);
+    box-shadow: 3px 3px var(--darker);
+    transform: translate(-1px, -1px);
+}
+
+.btn:hover {
+    color: var(--primary);
+    background-color: var(--secondary);
+    transform: translate(0, 0);
+    box-shadow: 2px 2px var(--darker);
+}
+
+.btn-inline {
+    display: inline;
+}
+
+.li-inline {
+    display: inline;
+}
+
+.nav-item {
+    margin: 0 40px;
+}
+
+.nav-item {
+    color: var(--primary);
+}
+
+.hero {
+    padding: 3% 4%;
+    background-color: var(--darker);
+    color: var(--primary);
+}
