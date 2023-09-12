@@ -10,7 +10,7 @@ router.get('/', wAuth, (req, res) => {
     })
     .then(dbPostData => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
-        res.render('all-pots-admin', {
+        res.render('all-posts-admin', {
             layout: 'dashboard',
             posts
         });
