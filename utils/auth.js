@@ -1,4 +1,4 @@
-const wAuth = (req, res, next) => {
+const withAuth = (req, res, next) => {
     if (!req.session.userId) {
         res.redirect('/login');
     } else {
@@ -6,4 +6,4 @@ const wAuth = (req, res, next) => {
     }
 };
 
-module.exports = wAuth;
+module.exports = withAuth;
