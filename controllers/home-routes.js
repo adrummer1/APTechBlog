@@ -45,4 +45,20 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/login', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('login');
+});
+
+router.get('/layouts/dashboard', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/');
+        return;
+    }
+    res.render('dashboard');
+});
+
 module.exports = router;
