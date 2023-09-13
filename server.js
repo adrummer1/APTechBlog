@@ -23,6 +23,10 @@ app.use(session(sess))
 const hbs = exphbs.create({
     helpers: {
         format_date: date => {
+            if (!(date instanceof Date)) {
+                console.error('Invalid date:', date);
+                return 'Invalid date';
+            }
             return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         }
     }
