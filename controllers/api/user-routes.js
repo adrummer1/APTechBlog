@@ -8,10 +8,8 @@ router.post('/', (req, res) => {
     })
     .then(dbUserData => {
         req.session.save(() => {
-            req.session.userId = dbUserData.id;
-            req.session.username = dbUserData.username;
             req.session.loggedIn = true;
-            res.json(dbUserData);
+            res.status(200).json(dbUserData);
         });
     })
         .catch(err => {
@@ -22,7 +20,7 @@ router.post('/', (req, res) => {
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
-            username: req.body.username
+            username: req.body.username,
         }
     }) .then(dbUserData => {
         if (!dbUserData) {
@@ -37,10 +35,8 @@ router.post('/login', (req, res) => {
         }
 
         req.session.save(() => {
-            req.session.UserId = dbUserData.id;
-            req.session.username = dbUserData.username;
             req.session.loggedIn = true;
-            res.json({ user: dbUserData, message: 'Login successful!'});
+            res.status(200).json({ user: dbUserData, message: 'You are now logged in!' });
         });
     });
 });

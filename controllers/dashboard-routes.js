@@ -5,7 +5,7 @@ const withAuth = require('../utils/auth');
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
-            userId: req.session.userId
+            userId: req.session.loggedIn
         }
     })
     .then(dbPostData => {
