@@ -66,6 +66,22 @@ input {
     color: var(--primary);
 }
 
+#username-input-signup {
+    width: 90%;
+}
+
+#password-input-signup {
+    width: 90%;
+}
+
+#username-input-login {
+    width: 90%;
+}
+
+#password-input-login {
+    width: 90%;
+}
+
 .btn {
     font-size: 1.3rem;
     text-decoration: none;

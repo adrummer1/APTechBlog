@@ -1,15 +1,17 @@
 const router = require('express').Router();
-const { Post } = require('../models');
+const { Post, User } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
     Post.findAll({
         where: {
-            userId: req.session.loggedIn
-        }
+            userId: req.session.userId
+        },
+        include: User
     })
     .then(dbPostData => {
         const posts = dbPostData.map((post) => post.get({ plain: true }));
+        console.log(posts)
         res.render('all-posts-admin', {
             layout: 'dashboard',
             posts

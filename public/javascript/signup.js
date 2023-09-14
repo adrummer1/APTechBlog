@@ -10,8 +10,12 @@ const signupFormHandler = async function(event) {
         }),
         headers: { "Content-Type": "application/json" }
     })
-    .then(function() {
-        document.location.replace("/dashboard");
+    .then(function(res) {
+        if (res.ok){
+            document.location.replace("/dashboard");
+        } else {
+            alert('Signup failed!')
+        }
     })
     .catch(err => console.log(err));
 }
