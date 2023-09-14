@@ -25,6 +25,7 @@ const hbs = exphbs.create({
                 console.error('Invalid date:', date);
                 return 'Invalid date';
             }
+            console.log('Date:', date);
             return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
         }
     }

@@ -89,6 +89,11 @@ input {
     box-shadow: 2px 2px var(--darker);
 }
 
+.navbar {
+    padding-bottom: -10%;
+    margin-bottom: 0;
+}
+
 .btn-inline {
     display: inline;
 }
@@ -102,7 +107,7 @@ input {
 }
 
 .nav-item {
-    color: var(--primary);
+    color: var(--darker);
 }
 
 .hero {
@@ -115,7 +120,7 @@ input {
     font-size: 3rem;
     background-color: var(--primary);
     color: var(--dark);
-    padding: 0 10px;
+    padding: 10px 10px;
     display: inline-block;
     border-radius: var(--border-radius);
     box-shadow: 6px 5px var(--darker); 
