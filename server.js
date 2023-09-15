@@ -2,6 +2,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const helpers = require('./utils/helpers')
 const app = express();
 const PORT = process.env.PORT || 3001;
 const sequelize = require('./config/connection');
@@ -18,18 +19,7 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({
-    helpers: {
-        format_date: date => {
-            if (!(date instanceof Date)) {
-                console.error('Invalid date:', date);
-                return 'Invalid date';
-            }
-            console.log('Date:', date);
-            return `${date.getMonth() + 1}/${date.getDate()}/${date.getFullYear()}`;
-        }
-    }
-});
+const hbs = exphbs.create({ helpers }); 
 
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');

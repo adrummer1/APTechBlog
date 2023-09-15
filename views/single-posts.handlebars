@@ -11,13 +11,13 @@
         </div>
     </article>
 
-    {{#if post.Comments}}
+    {{!-- {{#if post.Comment}} --}}
     <section class="card">
         <div class="card-header">
             <h3>Comments</h3>
         </div>
         <div class="card-body">
-            {{#each post.Comments}}
+            {{!-- {{#each post.Comment as |comment| }} --}}
             <div>
                 <p>
                     {{body}}
@@ -26,10 +26,10 @@
                     &mdash; {{User.username}}, {{format_date createdAt}}
                 </p>
             </div>
-            {{/each}}
+            {{!-- {{/each}} --}}
         </div>
     </section>
-    {{/if}}
+    {{!-- {{/if}} --}}
     <form id="new-comment-form" class="card">
         <div class="card-header">
             <h3>Add Comment</h3>
