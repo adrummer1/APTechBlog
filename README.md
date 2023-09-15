@@ -18,3 +18,5 @@ Users can expect the following app functionality:
 * Finally, the user can log out from the navigation.
 
 ## Screenshot
+
+![Screenshot](./images/APTechBlog.png)
