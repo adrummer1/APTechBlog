@@ -20,3 +20,7 @@ Users can expect the following app functionality:
 ## Screenshot
 
 ![Screenshot](./images/APTechBlog.png)
+
+## Link to deployed application
+
+[Here is a link to the deployed application!](https://peaceful-island-97542-55b14652157d.herokuapp.com/)
