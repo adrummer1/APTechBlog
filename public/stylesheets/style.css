@@ -27,7 +27,7 @@ h4,
 h5,
 h6 {
     margin: 0;
-    color: var(--secondary)
+    color: var(--dark)
 }
 
 h2 a:visited {
@@ -202,7 +202,7 @@ input {
 }
 
 .form-input {
-    width: 100%;
+    width: 95%;
     padding: 1%;
     margin: 5px 0;
     font-size: 1.2rem;
