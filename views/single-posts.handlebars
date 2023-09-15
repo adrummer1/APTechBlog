@@ -4,7 +4,7 @@
             <h2>{{post.title}}</h2>
         </div> 
         <div>
-            Written by {{post.User.username}} on {{format_date post.date}}
+            Written by {{post.User.username}} on {{format_date createdAt}}
         </div>
         <div>
             {{post.body}}
@@ -23,7 +23,7 @@
                     {{body}}
                 </p>
                 <p>
-                    &mdash; {{User.username}}, {{format_date date}}
+                    &mdash; {{User.username}}, {{format_date createdAt}}
                 </p>
             </div>
             {{/each}}
