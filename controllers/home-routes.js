@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Post, Comment, User } = require('../models');
 
+// GET route for retrieving all posts
 router.get('/', (req, res) => {
     Post.findAll({
         include: [User],
@@ -37,6 +38,7 @@ router.get('/post/:id', (req, res) => {
     });
 });
 
+// GET route for the signup page
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -45,6 +47,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+// GET route for the login page
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -53,6 +56,7 @@ router.get('/login', (req, res) => {
     res.render('login');
 });
 
+// GET route for the dashboard page. If a user is not logged in, redirect to the login page
 router.get('/layouts/dashboard', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');

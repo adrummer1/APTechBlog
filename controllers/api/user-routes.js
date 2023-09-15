@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// POST route to create a new user and start a new session
 router.post('/', (req, res) => {
     User.create({
         username: req.body.username,
@@ -19,6 +20,7 @@ router.post('/', (req, res) => {
     });
 });
 
+// POST route for existing user to log in 
 router.post('/login', (req, res) => {
     User.findOne({
         where: {
